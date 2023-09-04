@@ -1,68 +1,133 @@
 // Задача 10
 
 
-let d = +prompt('введите день');
-let m = +prompt('введите месяц');
-let y = +prompt('введите год');
+let d = document.querySelector('#day');
+let m = document.querySelector('#month');
+let y = document.querySelector('#year');
+let resBut = document.querySelector('#resBut');
+let result = document.querySelector('#result');
 
-if ((y % 4 == 0 || y % 400 == 0) && (y % 100 != 0)){
-    if (m == 2) {
-        if (d >= 1 && d <= 28){
-            console.log (d + 1, m, y)
+resBut.onclick = ()=>{
+
+if ((+y.value % 4 == 0 || +y.value % 400 == 0) && (+y.value % 100 != 0)){
+    //високосный год
+    if (+m.value == 2) {
+        // февраль
+        if (+d.value >= 1 && +d.value <= 28){
+            result.innerHTML = +d.value + 1 + '.' + +m.value + '.' + +y.value;
         }
-        if (d == 29){
-            console.log (d - 28, m + 1, y)
+        if (+d.value == 29){
+            result.innerHTML = +d.value - 28 + '.' + (+m.value + 1) + '.' + +y.value;
         }
     }
-    if (m == 1 || m == 3 || m == 5 || m == 7 || m == 8 || m == 10 || m == 12) {
-        if (m >= 1 && m <= 11) {
-            if (d >= 1 && d <= 31){
-                console.log (d + 1, m, y)
+    if (+m.value == 1 || +m.value == 3 || +m.value == 5 || +m.value == 7 || +m.value == 8 || +m.value == 10 || +m.value == 12) {
+        // где 31 день
+        if (+m.value >= 1 && +m.value <= 11) {
+            if (+d.value >= 1 && +d.value <= 30){
+                result.innerHTML = +d.value + 1 + '.' + +m.value + '.' + +y.value;
             }
-            if (d == 31){
-                console.log (d - 30, m + 1, y)
+            if (+d.value == 31){
+                result.innerHTML = +d.value - 30 + '.' + (+m.value + 1) + '.' + +y.value;
             }
         }
-        if (m == 12){
-            if (d >= 1 && d <= 30) {
-                console.log (d + 1, m, y)
+        if (+m.value == 12){
+            // декабрь
+            if (+d.value >= 1 && +d.value <= 30) {
+                result.innerHTML = +d.value + 1 + "." + +m.value + "." + +y.value;
             }
-            if (d == 31) {
-                console.log (d - 30, m -11, y + 1)
+            if (+d.value == 31) {
+                result.innerHTML = +d.value - 30 + "." + (+m.value -11) +"." + (+y.value + 1);
             }
         }
         
     }
-    if (m == 4 || m == 6 || m == 9 || m == 11) {
-        if (d >= 1 && d <= 29){
-            console.log (d + 1, m, y)
+    if (+m.value == 4 || +m.value == 6 || +m.value == 9 || +m.value == 11) {
+        // где 30 дней
+        if (+d.value >= 1 && +d.value <= 29){
+            result.innerHTML = +d.value + 1 + '.' + +m.value + '.' + +y.value;
         }
-        if (d == 30){
-            console.log (d - 29, m + 1, y)
+        if (+d.value == 30){
+            result.innerHTML = +d.value - 29 + '.' + (+m.value + 1) + '.' + +y.value;
         }
     }
 }
 else {
+    // не високосный год
 
+    if (+m.value == 2) {
+        // февраль
+        if (+d.value >= 1 && +d.value <= 27){
+            result.innerHTML = +d.value + 1 + '.' + +m.value + '.' + +y.value;
+        }
+        if (+d.value == 28){
+            result.innerHTML = +d.value - 27 + '.' + (+m.value + 1) + '.' + +y.value;
+        }
+    }
+
+    if (+m.value == 1 || +m.value == 3 || +m.value == 5 || +m.value == 7 || +m.value == 8 || +m.value == 10 || +m.value == 12) {
+        // где 31 день
+        if (+m.value >= 1 && +m.value <= 11) {
+            if (+d.value >= 1 && +d.value <= 30){
+                result.innerHTML = +d.value + 1 + '.' + +m.value + '.' + +y.value;
+            }
+            if (+d.value == 31){
+                result.innerHTML = +d.value - 30 + '.' + (+m.value + 1) + '.' + +y.value;
+            }
+        }
+        if (+m.value == 12){
+            // декабрь
+            if (+d.value >= 1 && +d.value <= 30) {
+                result.innerHTML = +d.value + 1 + "." + +m.value + "."+ +y.value;
+            }
+            if (+d.value == 31) {
+                result.innerHTML = +d.value - 30 + "." + (+m.value - 11) + "." + (+y.value + 1);
+            }
+        }
+        
+    }
+    if (+m.value == 4 || +m.value == 6 || +m.value == 9 || +m.value == 11) {
+        // где 30 дней
+        if (+d.value >= 1 && +d.value <= 29){
+            result.innerHTML = +d.value + 1 + '.' + +m.value + '.' + +y.value;
+        }
+        if (+d.value == 30){
+            result.innerHTML = +d.value - 29 + '.' + (+m.value + 1) + '.' + +y.value;
+        }
+    }
 }
+}
+
+
+
+
+
+
+
+
+
 
 
 
 let inp_one = document.querySelector('.inp_one');
 let inp_two = document.querySelector('.inp_two');
+let inp_three = document.querySelector('.inp_three')
 let but = document.querySelector('button');
+let res = document.querySelector('.res');
 but.onclick = () => {
     let one = +inp_one.value;
     let a = 0; //балл для 1 вопроса
 
     switch (one){
         case 1: 
-            a += 2;
+            a += 0;
             break;
         case 2: 
-            a += 0;
+            a += 2;
             break; 
         case 3: 
+            a += 0;
+            break;
+        case 4: 
             a += 0;
             break;
         default:
@@ -72,18 +137,42 @@ but.onclick = () => {
 
     
     let two = +inp_two.value;
-    let b = 0; //балл для 1 вопроса
+    let b = 0; //балл для 2 вопроса
     switch (two){
         case 1: 
-            b += 2;
+            b += 0;
             break;
         case 2: 
             b += 0;
             break; 
         case 3: 
-            b += 0;
+            b += 2;
+            break;
+        case 4: 
+            a += 0;
             break;
         default:
             console.log('нет')
     }
+
+    let three = +inp_three.value;
+    let c = 0; //балл для 2 вопроса
+    switch (three){
+        case 1: 
+            c += 0;
+            break;
+        case 2: 
+            c += 0;
+            break; 
+        case 3: 
+            c += 0;
+            break;
+        case 4: 
+            c += 2;
+            break;
+        default:
+            console.log('нет')
+    }
+
+    res.innerHTML = a + b + c;
 }
