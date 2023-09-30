@@ -1,0 +1,17 @@
+body{
+    display: grid;
+    grid-template-columns: 1fr 1;
+}
+img {
+    width: 300px;
+    height: 300px;
+    justify-self: center;
+}
+h2{
+    text-align: center;
+    color: brown;
+}
+p{
+    font-size: 16pt;
+    text-align: center
+}
