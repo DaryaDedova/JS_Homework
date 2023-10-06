@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="css/style.css">
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <script src="script.js"></script>
+   <title>Галерея изображений на jQuey</title>
+</head>
+<body>
+   
+   <div class="butt">
+      <button class="button">+</button>
+      <button class="buttonModal">Оплатить</button>
+   </div>
+
+   <div class="fhoto">
+      <div class="gallery">
+
+         <div class="small">
+
+            <a href="images/ск-1.jpg">
+               <img src="images/ск-1.jpg" alt="">
+            </a>
+
+            <a href="images/ск-2.jpg">
+               <img src="images/ск-2.jpg" alt="">
+            </a>
+
+            <a href="images/ск-3.jpg">
+               <img src="images/ск-3.jpg" alt="">
+            </a>
+            
+            <a href="images/ск-4.jpg">
+               <img src="images/ск-4.jpg" alt="">
+            </a>
+         </div>
+         
+         <div class="big">
+            <img src="images/2640653.svg" alt="" width="400">
+         </div>
+
+         <div class="small">
+
+            <a href="images/ск-5.jpg">
+               <img src="images/ск-5.jpg" alt="">
+            </a>
+
+            <a href="images/ск-6.jpg">
+               <img src="images/ск-6.jpg" alt="">
+            </a>
+
+            <a href="images/ск-7.jpg">
+               <img src="images/ск-7.jpg" alt="">
+            </a>
+            
+            <a href="images/скандинавия.jpg">
+               <img src="images/скандинавия.jpg" alt="">
+            </a>
+         </div>
+      </div>
+   </div>
+
+   <div class="modal">
+      <div class="modalWin">
+         <div class="details">
+            <h3>credit card details</h3>
+        </div>
+        <div class="card">
+            <div class="creditCard">
+                <div class="info column">
+                    <div class="number column">
+                        <div class="column">
+                            <p>Card Number</p>
+                            <input type="text"placeholder="1234 5678 9012 3456" class="cardNumber">
+                        </div>
+                        <div class="column">
+                            <p>Name On Card</p>
+                            <input type="text" placeholder="Name Surname" class="cardName">
+                        </div>
+                    </div>
+                    <div class="date">
+                        <div class="column">
+                            <p>Expiry Date</p>
+                            <input type="text" placeholder="02" class="dayCard">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="2017" class="yearCard">
+                        </div>
+                        <div class="column">
+                            <p>CVV / CVN</p>
+                            <input type="password" placeholder="***" class="pinCard">
+                        </div>
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="moon_flag.png" alt="">
+                </div>
+            </div>
+        </div>
+        <img src="images/free-icon-cross-mark-4225690.png" alt="" class="imageCan">
+      </div>
+   </div>
+</body>
+</html>
