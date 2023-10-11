@@ -212,6 +212,18 @@ img {
     cursor: pointer;
 }
 
+
+.buttE {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    border: 1px solid grey;
+    padding: 10px 15px;
+    background-color: rgba(0, 100, 0, 0.377);
+    border-radius: 5px;
+    cursor: pointer;
+
+}
 /* .gallery{
     display: none;
 } */
