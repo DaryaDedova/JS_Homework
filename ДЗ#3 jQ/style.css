@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+}
+header {
+    width: 100%;
+    height: 150px;
+    background-color: rgba(0, 179, 255, 0.262);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(123, 123, 123);
+    font-size: 18pt;
+}
+
+header div:hover{
+    border-bottom: 1px solid rgb(123, 123, 123);
+    cursor: pointer;
+}
+
+header img {
+    display: none
+}
+
+.first, .second{
+    position: absolute;
+    width: 100%;
+    height: max-content;
+    top: 0px;
+    right: 0px;
+    background-color: rgba(183, 183, 183, 0.689);
+    display: none;
+}
+
+.firstHW, .secondHW{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    width: 80%;
+    height: 600px;
+    margin: auto;
+    margin-bottom: 300px;
+
+}
+
+.firstHW{
+    height: max-content;
+}
+
+.firstHW iframe{    
+    display: flex;
+    align-items: start;
+    width: 85%;
+    height: 670px;
+}
+
+.firstHW .closeF{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 20px;
+    left: 50px;
+    cursor: pointer;
+
+}
+
+.secondHW iframe{
+    display: flex;
+    align-items: start;
+    width: 80%;
+    height: 600px;
+}
+
+.secondHW .closeS{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 20px;
+    left: 60px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+    header img {
+        display: block;
+        width: 70px;
+        height: 70px;
+        padding-right: 30px;
+    }
+
+    .firstHomeW, .secondHomeW{
+        display: none;
+    }
+
+    header{
+        justify-content: end;
+    }
+    
+
+    .firstHW .closeF{
+        left: 0px;    
+    }
+    
+    .secondHW .closeS{
+        left: 0px;
+    }
+}
+
+.burg{
+    position: absolute;
+    top: 0;
+    left: -300px;
+    background-color: rgba(0, 179, 255, 0.729);
+    width: 250px;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 40px;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
+}
+
+.burg div{    
+    cursor: pointer;
+    color: rgb(123, 123, 123);
+    font-size: 18pt;
+}
+
+.burg div:hover{    
+    border-bottom: 1px solid rgb(123, 123, 123);
+}
