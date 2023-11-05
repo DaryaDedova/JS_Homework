@@ -1,0 +1,19 @@
+.newsNews .title{
+    font-size: 16pt;
+    text-align: start;
+    
+}
+
+.newsNews .news{
+    font-size: 14pt;
+    font-weight: 100;
+}
+
+.ord{
+    border-collapse: collapse;
+}
+
+.newsNews th{
+    border: 2px solid;
+    padding: 10px;
+}
